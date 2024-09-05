@@ -11,11 +11,11 @@ public:
 	// Constructors
 	Block();
 	Block(std::string const& n);
-	Block(std::string const& n, std::vector<std::unique_ptr<InputPin>> i, std::vector<std::unique_ptr<OutputPin>> b_out_reg o);
+	Block(std::string const& n, std::vector<std::shared_ptr<InputPin>> i, std::vector<std::shared_ptr<OutputPin>> o);
 
 	// Methods
 	const bool execute();
-	const bool readyExecute();
+	const bool readyToExecute();
 
 	// Customer Code
 	virtual bool entryFunction() = 0;
@@ -24,6 +24,8 @@ public:
 private:
 	// Data
 	const std::string b_name = "";
-	std::vector<std::unique_ptr<InputPin>> b_in_reg = {};
-	std::vector<std::unique_ptr<OutputPin>> b_out_reg = {};
+	const std::vector<std::shared_ptr<InputPin>> b_in_reg = {};
+	const std::vector<std::shared_ptr<OutputPin>> b_out_reg = {};
+
+	bool updateOutputs();
 };

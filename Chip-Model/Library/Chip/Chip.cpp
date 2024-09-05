@@ -8,7 +8,7 @@ Chip::Chip(std::string const& n, std::vector<std::unique_ptr<Block>> b) : name(n
     std::cout << "built " << name << " chip\n";
 };
 
-const bool Chip::execute(std::vector<InputData>& Data) {
+const bool Chip::execute(std::vector<ChipInputData>& Data) {
     std::cout << "executing " << name << " chip\n";
 
     std::cout << name << "finished executing\n";
