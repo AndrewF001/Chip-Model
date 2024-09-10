@@ -3,5 +3,7 @@
 
 int main() {
 	Chip c;
+	ChipInputStream s;
+	c.execute(s);
 	return 0;
 }
