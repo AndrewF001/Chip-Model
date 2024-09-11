@@ -37,7 +37,7 @@ const bool Chip::execute(ChipInputStream& Stream) {
     return true;
 }
 
-bool Chip::addBlock(std::unique_ptr<Block>& b) {
+bool Chip::addBlock(std::unique_ptr<Block> b) {
     blocks.push_back(std::move(b));
     return true;
 }

@@ -6,6 +6,7 @@
 #include "../Block/Block.h"
 #include "../Data/Register.h"
 
+// TODO: Make this a template class
 class Block {
 public:
 	// Constructors
@@ -18,7 +19,7 @@ public:
 	const bool readyToExecute();
 	const bool resetBlock();
 	const bool connectBlock(Block& b);
-	const bool connectBlock(std::vector<Block&> b);
+	const bool connectBlock(std::vector<Block*> b);
 
 	// Customer Code
 	virtual bool entryFunction() = 0;

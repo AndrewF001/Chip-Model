@@ -55,14 +55,14 @@ const bool Block::connectBlock(Block& block) {
     return false;
 }
 
-const bool Block::connectBlock(std::vector<Block&> blocks) {
+const bool Block::connectBlock(std::vector<Block*> blocks) {
     auto out = std::shared_ptr<OutputPin>();
 
     // Link registers
 	for (auto& b : blocks) {
 		auto in = std::shared_ptr<InputPin>();
 		out->connect(in);
-		b.b_in_reg.push_back(std::move(in));
+		b->b_in_reg.push_back(std::move(in));
 	}
 
     b_out_reg.push_back(std::move(out));
