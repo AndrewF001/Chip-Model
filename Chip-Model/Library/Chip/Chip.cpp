@@ -61,8 +61,8 @@ bool Chip::resetBlocksAndLoadPackage(ChipInputPackage& package) {
     for (auto& block : blocks) {
         block->resetBlock();
     }
-    for (auto& data : package.data) {
-        data.first.lock()->data = data.second;
+    for (auto& data : package.package) {
+        data.pin.lock()->data = data.data;
     }
     return false;
 }

@@ -141,12 +141,14 @@
     <ClCompile Include="Library\Block\Block.cpp" />
     <ClCompile Include="Library\Chip-Model.h" />
     <ClCompile Include="Library\Data\Register.cpp" />
+    <ClCompile Include="Library\Test\TestClass.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Library\Data\ChipInputData.h" />
     <ClInclude Include="Library\Chip\Chip.h" />
     <ClInclude Include="Library\Block\Block.h" />
     <ClInclude Include="Library\Data\Register.h" />
+    <ClInclude Include="Library\Test\TestClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
